@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Tugas 1</title>
+    <style>
+        li.fav{
+            background: cornflowerblue;
+        }
+        .fak{
+            background: cornflowerblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+      Hello  
+        <ul>
+            <li v-for="book,i in filteredBooks" @click="favFunction(i)" :class="{fav: book.isFav}">
+                <p>{{book.title}} - {{book.author}}</p>
+            </li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+
+</html>
